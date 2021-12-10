@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="canh1" type="text">
+<input id="canh2" type="text">
+<input id="canh3" type="text">
+<button onclick="kiemtra()">Kiểm tra</button>
+<p id="ketqua"></p>
+<script>
+    function kiemtra(){
+        let a = parseInt(document.getElementById("canh1").value);
+        let b = parseInt(document.getElementById("canh2").value);
+        let c = parseInt(document.getElementById("canh3").value);
+        if (a*a==b*b+c*c || b*b==c*c+a*a || c*c==a*a+b*b){
+            document.getElementById("ketqua").innerHTML="đây là 3 cạnh của tam giác đều";
+        }else {
+            document.getElementById("ketqua").innerHTML="đây không phải 3 cạnh tam giác đều";
+        }
+    }
+</script>
+</body>
+</html>
